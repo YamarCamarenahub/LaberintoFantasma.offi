@@ -65,7 +65,7 @@ public class PantallaInicio extends JFrame {
         integrantesLabel.setFont(tituloFont);
         integrantesLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         datosPanel.add(integrantesLabel);
-
+     // Lista de integrantes
         String[] integrantes = {
                 "Elyezer Portillo – 20-70-7338",
                 "Bolivar Cedeño – 8-999-2068",
@@ -100,7 +100,7 @@ public class PantallaInicio extends JFrame {
         datosPanel.add(fecha);
 
         add(datosPanel, BorderLayout.CENTER);
-
+    // Botón para iniciar el juego o proyecto
         JButton iniciar = new JButton("Iniciar Juego");
         iniciar.setFont(new Font("Arial", Font.BOLD, 20));
         iniciar.addActionListener(e -> {
@@ -115,7 +115,7 @@ public class PantallaInicio extends JFrame {
 
         setVisible(true);
     }
-
+    // Método auxiliar para obtener recursos con verificación
     private URL getResourceURL(String path) {
         URL url = getClass().getResource(path);
         if (url == null) {
