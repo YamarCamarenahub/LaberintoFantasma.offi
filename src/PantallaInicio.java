@@ -14,13 +14,13 @@ public class PantallaInicio extends JFrame {
 
         JPanel logosPanel = new JPanel(new BorderLayout());
         logosPanel.setBackground(Color.WHITE);
-
+// Carga y escala el logo de la U
         ImageIcon iconUTP = new ImageIcon(getClass().getResource("/resources/logo_utp.png"));
         Image scaledUTP = iconUTP.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
         JLabel logoUTP = new JLabel(new ImageIcon(scaledUTP));
         logoUTP.setHorizontalAlignment(SwingConstants.LEFT);
         logosPanel.add(logoUTP, BorderLayout.WEST);
-
+// Carga y escala el logo de la FISC
         ImageIcon iconFISC = new ImageIcon(getClass().getResource("/resources/logo_fisc.png"));
         Image scaledFISC = iconFISC.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH);
         JLabel logoFISC = new JLabel(new ImageIcon(scaledFISC));
@@ -115,7 +115,9 @@ public class PantallaInicio extends JFrame {
 
         setVisible(true);
     }
+}
 
+    // Método auxiliar para obtener recursos con verificación
     private URL getResourceURL(String path) {
         URL url = getClass().getResource(path);
         if (url == null) {
